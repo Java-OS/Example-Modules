@@ -21,8 +21,10 @@ Open JOS web panel `http://w.x.y.z:7080` and go to modules tab , click on `+` bu
 ![](pictures/01.png)
 
 ### Manage Logs: 
-Click on log management button then config your log appender.
-**Note :** currently jos support `file` and `syslog` appender.
+Click on log management button then config your log appender.    
+**Note :** currently jos support `file` and `syslog` appender.    
+**Note :** You can runtime change log level without restart module.        
+
 #### File Appender
 ![](pictures/02.png)
 now click on `+` to add new log appender base on your favorite configuration.    
