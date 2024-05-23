@@ -7,11 +7,13 @@ import org.slf4j.LoggerFactory;
 import java.net.InetSocketAddress;
 
 public class HttpContainer {
+    public static final HttpContainer instance = new HttpContainer();
     private static final Logger logger = LoggerFactory.getLogger(HttpContainer.class);
     private HttpServer httpServer;
-
-    public HttpContainer(String host, int port) {
+    private HttpContainer() {
         try {
+            String host = System.getenv("HTTP_SERVER_HOST");
+            int port = Integer.parseInt(System.getenv("HTTP_SERVER_PORT"));
             httpServer = HttpServer.create(new InetSocketAddress(host, port), -1);
         } catch (Exception e) {
             logger.error("Http container error", e);
