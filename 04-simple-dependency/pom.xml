@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>ir.moke</groupId>
+        <artifactId>example-modules</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>04-simple-dependency</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>ir.moke.jos</groupId>
+            <artifactId>jos-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>ir.moke</groupId>
+            <artifactId>00-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>ir.moke.jpkg</groupId>
+                <artifactId>maven-jpkg</artifactId>
+                <version>1.0</version>
+                <configuration>
+                    <name>04-simple-dependency</name>
+                    <version>0.1</version>
+                    <description>This module dependent to common module</description>
+                    <maintainer>Mahdi Sheikh Hosseini</maintainer>
+                    <dependencies>
+                        <!-- see 00-common pom.xml line 39,40 -->
+                        <dependency>
+                            <name>00-common</name>
+                            <version>0.1</version>
+                        </dependency>
+                    </dependencies>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>

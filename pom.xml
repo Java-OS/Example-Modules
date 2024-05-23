@@ -10,9 +10,11 @@
     <name>example-modules</name>
 
     <modules>
+        <module>00-common</module>
         <module>01-basic</module>
         <module>02-timer-task</module>
         <module>03-http-server</module>
+        <module>04-simple-dependency</module>
     </modules>
 
     <dependencyManagement>
@@ -37,7 +39,7 @@
             <dependency>
                 <groupId>com.google.code.gson</groupId>
                 <artifactId>gson</artifactId>
-                <version>2.10.1</version>
+                <version>2.11.0</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

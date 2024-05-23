@@ -1,6 +1,6 @@
 import ir.moke.module.timer.ModuleRunner;
 
-module p01_basic {
+module p02_timer_task {
     requires jos.api;
     requires org.slf4j;
     exports ir.moke.module.timer;
