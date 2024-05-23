@@ -1,13 +1,17 @@
 ## Module with dependency
-This module dependent to 00-module . 
 
-before install you should compile and install 00-common . 
+This module dependent to 00-module .   
+You should not in `pom.xml` dependency scope must be `provided`.
+
+before install you must compile and install 00-common .
+
 ```shell
 (cd 00-common ; mvn clean compile package jpkg:archive)
 (cd 04-simple-dependency ; mvn clean compile package jpkg:archive)
 ```
 
-modules available on : 
+modules available on :
+
 ```shell
 00-common/target/jos-module/00-common-0.1.jpkg
 04-simple-dependency/target/jos-module/04-simple-dependency-0.1.jpkg
