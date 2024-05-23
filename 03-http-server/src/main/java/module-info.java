@@ -1,8 +1,9 @@
-import ir.moke.module.timer.ModuleRunner;
+import ir.moke.module.httpserver.ModuleRunner;
 
 module p01_basic {
     requires jos.api;
     requires org.slf4j;
-    exports ir.moke.module.timer;
+    requires jdk.httpserver;
+    exports ir.moke.module.httpserver;
     provides ir.moke.jos.api.JModule with ModuleRunner;
 }

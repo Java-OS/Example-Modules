@@ -1,4 +1,4 @@
-package com.sample.module.basic;
+package ir.moke.module.basic;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

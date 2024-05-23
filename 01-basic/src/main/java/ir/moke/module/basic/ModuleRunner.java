@@ -1,4 +1,4 @@
-package com.sample.module.basic;
+package ir.moke.module.basic;
 
 import ir.moke.jos.api.JModule;
 

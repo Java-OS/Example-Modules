@@ -1,4 +1,4 @@
-package com.sample.module.timer;
+package ir.moke.module.timer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

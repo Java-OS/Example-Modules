@@ -1,4 +1,4 @@
-package com.sample.module.timer;
+package ir.moke.module.timer;
 
 import ir.moke.jos.api.JModule;
 

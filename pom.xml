@@ -12,6 +12,7 @@
     <modules>
         <module>01-basic</module>
         <module>02-timer-task</module>
+        <module>03-http-server</module>
     </modules>
 
     <dependencyManagement>
