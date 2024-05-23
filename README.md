@@ -25,24 +25,24 @@ ls ./target/jos-module/01-basic-0.1.jpkg
 ```
 
 ### Manage Modules:
-Open JOS web panel `http://w.x.y.z:7080` and go to modules tab , click on `+` button and choose `jpkg` archive.
-![](pictures/01.png)
+Open JOS web panel `http://w.x.y.z:7080` and go to modules tab , click on `+` button and choose `jpkg` archive.     
+![](pictures/01.png)     
 
-### Manage Logs: 
+### Manage Logs:     
 Click on log management button then config your log appender.    
 **Note :** currently jos support `file` and `syslog` appender.    
 **Note :** You can runtime change log level without restart module.        
 
-#### File Appender
-![](pictures/02.png)
-now click on `+` to add new log appender base on your favorite configuration.    
-![](pictures/03.png)   
-click on love stream button if you want to verify pattern or levels.    
-![](pictures/04.png)
-#### Syslog Appender
-Go to syslog tab.
-![](pictures/05.png)
-Click on `+` to add new syslog appender.    
-![](pictures/06.png)
+#### File Appender   
+![](pictures/02.png)    
+now click on `+` to add new log appender base on your favorite configuration.        
+![](pictures/03.png)     
+click on love stream button if you want to verify pattern or levels.        
+![](pictures/04.png)     
+#### Syslog Appender     
+Go to syslog tab.     
+![](pictures/05.png)     
+Click on `+` to add new syslog appender.         
+![](pictures/06.png)     
 
 
