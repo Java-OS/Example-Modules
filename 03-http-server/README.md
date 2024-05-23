@@ -10,7 +10,7 @@ Open JOS panel then :
 `settings` > `environments`  
 Click on `+` button and add new environment.    
 ![](../pictures/07.png)      
-after add environment jvm should be restarted.   
+after add environments jvm should be restarted.   
 please follow animations.    
 ![](../pictures/08.png)      
 
