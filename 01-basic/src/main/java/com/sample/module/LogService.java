@@ -3,18 +3,17 @@ package com.sample.module;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.concurrent.ExecutorService;
-
 public class LogService {
     private static final Logger logger = LoggerFactory.getLogger(LogService.class);
 
-    public static void generateLog(ExecutorService es) {
-        while (!es.isShutdown()) {
-            es.execute(LogService::sendInfoLog);
-            es.execute(LogService::sendWarnLog);
-            es.execute(LogService::sendDebugLog);
-            es.execute(LogService::sendErrorLog);
-            es.execute(LogService::sendTraceLog);
+    public static void generateLog() {
+        while (true) {
+            sleep();
+            sendInfoLog();
+            sendWarnLog();
+            sendDebugLog();
+            sendErrorLog();
+            sendTraceLog();
         }
     }
 
@@ -36,5 +35,13 @@ public class LogService {
 
     public static void sendTraceLog() {
         logger.trace("This is trace log");
+    }
+
+    public static void sleep() {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
