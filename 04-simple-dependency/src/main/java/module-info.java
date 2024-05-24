@@ -1,4 +1,4 @@
-module p03_http_server {
+module p04_simple_dependency {
     requires jos.api;
     requires org.slf4j;
     requires p00_common;

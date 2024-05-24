@@ -38,3 +38,5 @@ nbdist/
 nbactions.xml
 nb-configuration.xml
 *.log
+tomcat.*/
+temp/

@@ -15,6 +15,7 @@
         <module>02-timer-task</module>
         <module>03-http-server</module>
         <module>04-simple-dependency</module>
+        <module>05-apache-tomcat</module>
     </modules>
 
     <dependencyManagement>
