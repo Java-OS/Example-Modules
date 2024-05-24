@@ -47,7 +47,7 @@ rg.apache.tomcat.catalina
         at java.base/java.lang.Thread.run(Thread.java:1583)
 ```   
 
-I can not use this solution:  [StackOverflow Question](https://stackoverflow.com/questions/78527981/tomcat-jpms-error-jakarta-security-auth-message).      
+I can not use `#Naman` solution:  [StackOverflow Question](https://stackoverflow.com/questions/78527981/tomcat-jpms-error-jakarta-security-auth-message).      
 Should i modify Jos `init` program any for tomcat ?!
 
 
