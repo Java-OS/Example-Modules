@@ -18,6 +18,7 @@
         <module>05-apache-tomcat</module>
         <module>06-jetty</module>
         <module>07-zeroMQ</module>
+        <module>08-vertx</module>
     </modules>
 
     <dependencies>
