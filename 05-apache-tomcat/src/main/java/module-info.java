@@ -4,6 +4,7 @@ module p05_apache_tomcat {
     requires jakarta.servlet;
     requires org.apache.tomcat.jasper;
     requires org.apache.tomcat.catalina;
+    exports ir.moke.module.tomcat.servlet;
 
     provides ir.moke.jos.api.JModule with ir.moke.module.tomcat.ModuleRunner;
 }
