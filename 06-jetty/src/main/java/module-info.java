@@ -1,4 +1,4 @@
-module p05_apache_tomcat {
+module p06_jetty {
     requires org.slf4j;
     requires jos.api;
     requires org.eclipse.jetty.server;
