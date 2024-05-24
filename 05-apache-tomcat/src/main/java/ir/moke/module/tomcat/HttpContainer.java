@@ -17,7 +17,7 @@ import java.util.stream.Stream;
 public class HttpContainer {
     public static final HttpContainer instance = new HttpContainer();
     private static final Logger logger = LoggerFactory.getLogger(HttpContainer.class);
-    private static final String contextPath = "/app";
+    private static final String contextPath = "/api";
     private static final String host = System.getenv("HTTP_SERVER_HOST");
     private static final String port = System.getenv("HTTP_SERVER_PORT");
     private static final String appBase = "/tmp/tomcat";
@@ -35,17 +35,6 @@ public class HttpContainer {
 
         tomcat.addServlet(contextPath, "hello", new HelloServlet());
         context.addServletMappingDecoded("/hello", "hello");
-    }
-
-    private static void createAppBaseDirectory() {
-        try {
-            Path appBasePath = Path.of(appBase);
-            if (!Files.exists(appBasePath)) {
-                Files.createDirectory(appBasePath);
-            }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
     }
 
     public void start() {
@@ -69,6 +58,17 @@ public class HttpContainer {
             logger.info("Tomcat server stopped");
         } catch (Exception e) {
             logger.error("Tomcat error", e);
+        }
+    }
+
+    private void createAppBaseDirectory() {
+        try {
+            Path appBasePath = Path.of(appBase);
+            if (!Files.exists(appBasePath)) {
+                Files.createDirectory(appBasePath);
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }
