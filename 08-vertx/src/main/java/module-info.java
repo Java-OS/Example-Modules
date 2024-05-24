@@ -1,8 +1,8 @@
-module p07_zeromq {
-    requires org.slf4j;
+module p08_vertx {
     requires jos.api;
-    requires io.vertx.web;
     requires io.vertx.core;
+    requires io.vertx.web;
+    requires org.slf4j;
 
     provides ir.moke.jos.api.JModule with ir.moke.module.vertx.ModuleRunner;
 }
