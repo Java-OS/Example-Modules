@@ -19,6 +19,7 @@
         <module>06-jetty</module>
         <module>07-zeroMQ</module>
         <module>08-vertx</module>
+        <module>09-quartz</module>
     </modules>
 
     <dependencies>
