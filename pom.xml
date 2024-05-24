@@ -16,6 +16,7 @@
         <module>03-http-server</module>
         <module>04-simple-dependency</module>
         <module>05-apache-tomcat</module>
+        <module>06-jetty</module>
     </modules>
 
     <dependencyManagement>
