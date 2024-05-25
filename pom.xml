@@ -21,6 +21,7 @@
         <module>08-vertx</module>
         <module>09-quartz</module>
         <module>10-moquette</module>
+        <module>11-jersey</module>
     </modules>
 
     <dependencies>
