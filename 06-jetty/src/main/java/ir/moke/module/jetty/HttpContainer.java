@@ -17,7 +17,7 @@ public class HttpContainer {
     private HttpContainer() {
         server = new Server(Integer.parseInt(Optional.ofNullable(port).orElse("8080")));
         ServletHandler handler = new ServletHandler();
-        handler.addServletWithMapping(HelloServlet.class, "/*");
+        handler.addServletWithMapping(HelloServlet.class, "/hello");
         server.setHandler(handler);
     }
 
