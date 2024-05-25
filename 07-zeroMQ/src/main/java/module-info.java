@@ -1,4 +1,4 @@
-module p07_zeromq {
+module p07_zeromq  {
     requires org.slf4j;
     requires jos.api;
     requires org.zeromq.jeromq;
