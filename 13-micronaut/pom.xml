@@ -48,12 +48,15 @@
     </dependencyManagement>
 
     <dependencies>
+        <!-- JOS Api -->
         <dependency>
             <groupId>ir.moke.jos</groupId>
             <artifactId>jos-api</artifactId>
             <version>1.0</version>
             <scope>provided</scope>
         </dependency>
+
+        <!-- Log -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -110,5 +113,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
