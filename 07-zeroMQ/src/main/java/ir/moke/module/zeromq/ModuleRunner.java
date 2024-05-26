@@ -1,10 +1,10 @@
 package ir.moke.module.zeromq;
 
-import ir.moke.jos.api.JModule;
+import ir.moke.jos.api.IModule;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ModuleRunner implements JModule {
+public class ModuleRunner implements IModule {
     private static final Logger logger = LoggerFactory.getLogger(ModuleRunner.class);
 
     @Override

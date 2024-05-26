@@ -4,5 +4,5 @@ module p08_vertx {
     requires io.vertx.web;
     requires org.slf4j;
 
-    provides ir.moke.jos.api.JModule with ir.moke.module.vertx.ModuleRunner;
+    provides ir.moke.jos.api.IModule with ir.moke.module.vertx.ModuleRunner;
 }

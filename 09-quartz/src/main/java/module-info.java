@@ -4,5 +4,5 @@ module p09_quartz {
     requires jos.api;
     opens ir.moke.module.quartz to quartz;
 
-    provides ir.moke.jos.api.JModule with ir.moke.module.quartz.ModuleRunner;
+    provides ir.moke.jos.api.IModule with ir.moke.module.quartz.ModuleRunner;
 }

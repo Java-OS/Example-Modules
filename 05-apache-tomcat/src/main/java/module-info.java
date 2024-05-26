@@ -6,5 +6,5 @@ module p05_apache_tomcat {
     requires org.apache.tomcat.catalina;
     exports ir.moke.module.tomcat.servlet;
 
-    provides ir.moke.jos.api.JModule with ir.moke.module.tomcat.ModuleRunner;
+    provides ir.moke.jos.api.IModule with ir.moke.module.tomcat.ModuleRunner;
 }

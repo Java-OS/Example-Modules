@@ -3,5 +3,5 @@ module p03_http_server {
     requires org.slf4j;
     requires jdk.httpserver;
     exports ir.moke.module.httpserver;
-    provides ir.moke.jos.api.JModule with ir.moke.module.httpserver.ModuleRunner;
+    provides ir.moke.jos.api.IModule with ir.moke.module.httpserver.ModuleRunner;
 }

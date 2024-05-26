@@ -17,7 +17,7 @@ module p11_jersey {
     requires jakarta.json.bind;
     requires com.fasterxml.jackson.jakarta.rs.json;
 
-    provides ir.moke.jos.api.JModule with ir.moke.module.jersey.ModuleRunner;
+    provides ir.moke.jos.api.IModule with ir.moke.module.jersey.ModuleRunner;
 
     exports ir.moke.module.jersey.resource;
     exports ir.moke.module.jersey.model;

@@ -3,5 +3,5 @@ module p07_zeromq {
     requires jos.api;
     requires org.zeromq.jeromq;
 
-    provides ir.moke.jos.api.JModule with ir.moke.module.zeromq.ModuleRunner;
+    provides ir.moke.jos.api.IModule with ir.moke.module.zeromq.ModuleRunner;
 }

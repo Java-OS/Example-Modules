@@ -1,8 +1,8 @@
 package ir.moke.module.basic;
 
-import ir.moke.jos.api.JModule;
+import ir.moke.jos.api.IModule;
 
-public class ModuleRunner implements JModule {
+public class ModuleRunner implements IModule {
 
     @Override
     public void start() {

@@ -1,10 +1,10 @@
 package ir.moke.module.timer;
 
-import ir.moke.jos.api.JModule;
+import ir.moke.jos.api.IModule;
 
 import java.util.Timer;
 
-public class ModuleRunner implements JModule {
+public class ModuleRunner implements IModule {
     private static final TaskService taskService = new TaskService();
     private static Timer timer;
 
