@@ -23,6 +23,7 @@
         <module>10-moquette</module>
         <module>11-jersey</module>
         <module>12-vertx-dynamic-api</module>
+        <module>13-micronaut</module>
     </modules>
 
     <dependencies>

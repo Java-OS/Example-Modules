@@ -13,7 +13,6 @@
     <artifactId>11-jersey</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-
     <dependencies>
         <dependency>
             <groupId>ir.moke.jos</groupId>
