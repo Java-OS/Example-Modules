@@ -12,7 +12,7 @@
 
     <groupId>ir.moke.module.micronaut</groupId>
     <artifactId>14-micronaut-hibernate</artifactId>
-    <version>0.1</version>
+    <version>0.1-SNAPSHOT</version>
 
     <properties>
         <packaging>jar</packaging>
@@ -113,69 +113,6 @@
     </dependencies>
     <build>
         <plugins>
-            <plugin>
-                <groupId>io.micronaut.maven</groupId>
-                <artifactId>micronaut-maven-plugin</artifactId>
-                <configuration>
-                    <configFile>aot-${packaging}.properties</configFile>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-enforcer-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <!-- Uncomment to enable incremental compilation -->
-                    <!-- <useIncrementalCompilation>false</useIncrementalCompilation> -->
-
-                    <annotationProcessorPaths combine.self="override">
-                        <path>
-                            <groupId>io.micronaut</groupId>
-                            <artifactId>micronaut-inject-java</artifactId>
-                            <version>${micronaut.core.version}</version>
-                        </path>
-                        <path>
-                            <groupId>io.micronaut.data</groupId>
-                            <artifactId>micronaut-data-processor</artifactId>
-                            <version>${micronaut.data.version}</version>
-                            <exclusions>
-                                <exclusion>
-                                    <groupId>io.micronaut</groupId>
-                                    <artifactId>micronaut-inject</artifactId>
-                                </exclusion>
-                            </exclusions>
-                        </path>
-                        <path>
-                            <groupId>io.micronaut</groupId>
-                            <artifactId>micronaut-graal</artifactId>
-                            <version>${micronaut.core.version}</version>
-                        </path>
-                        <path>
-                            <groupId>io.micronaut</groupId>
-                            <artifactId>micronaut-http-validation</artifactId>
-                            <version>${micronaut.core.version}</version>
-                        </path>
-                        <path>
-                            <groupId>io.micronaut.serde</groupId>
-                            <artifactId>micronaut-serde-processor</artifactId>
-                            <version>${micronaut.serialization.version}</version>
-                            <exclusions>
-                                <exclusion>
-                                    <groupId>io.micronaut</groupId>
-                                    <artifactId>micronaut-inject</artifactId>
-                                </exclusion>
-                            </exclusions>
-                        </path>
-                    </annotationProcessorPaths>
-                    <compilerArgs>
-                        <arg>-Amicronaut.processing.group=ir.moke.module.micronaut</arg>
-                        <arg>-Amicronaut.processing.module=14-micronaut-hibernate</arg>
-                    </compilerArgs>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
