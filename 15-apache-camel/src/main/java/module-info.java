@@ -1,4 +1,4 @@
-module p09_quartz {
+module p15_apache_camel {
     requires org.slf4j;
     requires jos.api;
     requires camel.main;
