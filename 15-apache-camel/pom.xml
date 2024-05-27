@@ -25,7 +25,7 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- Quartz -->
+        <!-- Apache Camel -->
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-core</artifactId>
