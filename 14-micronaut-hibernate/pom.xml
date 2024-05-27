@@ -31,18 +31,6 @@
         </repository>
     </repositories>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>io.micronaut.platform</groupId>
-                <artifactId>micronaut-parent</artifactId>
-                <version>4.4.3</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
     <dependencies>
         <!-- JOS Api -->
         <dependency>
@@ -206,7 +194,6 @@
                     </compilerArgs>
                 </configuration>
             </plugin>
-
 
             <!-- jpkg -->
             <plugin>

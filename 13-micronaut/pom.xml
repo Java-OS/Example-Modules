@@ -32,19 +32,6 @@
         </repository>
     </repositories>
 
-    <!-- Micronaut parent -->
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>io.micronaut.platform</groupId>
-                <artifactId>micronaut-parent</artifactId>
-                <version>4.4.2</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
     <dependencies>
         <!-- JOS Api -->
         <dependency>
@@ -89,15 +76,35 @@
 
     <build>
         <plugins>
+            <!-- copy compiled jar file to target/lib , only needed for test jpms -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.2.2</version>
+                <configuration>
+                    <outputDirectory>${project.build.directory}/lib/</outputDirectory>
+                </configuration>
             </plugin>
+
+            <!-- Copy dependencies , only needed for test jpms -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
+
+            <!-- jpkg -->
             <plugin>
                 <groupId>ir.moke.jpkg</groupId>
                 <artifactId>maven-jpkg</artifactId>
