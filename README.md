@@ -45,7 +45,11 @@ Click on log management button then config your log appender.
 ![](pictures/02.png)    
 now click on `+` to add new log appender base on your favorite configuration.        
 ![](pictures/03.png)     
-click on live stream button if you want to verify pattern or levels.        
+click on live stream button.        
+Usable for:     
+* stream logs on web browser
+* check log pattern
+* check levels
 ![](pictures/04.png)
 
 #### Syslog Appender
