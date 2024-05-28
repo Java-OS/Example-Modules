@@ -1,14 +1,5 @@
 # Sample JOS Modules
 
-### this repository contain simple jos modules based on :
-
-* Java pure
-* Tomcat
-* Jetty
-* ActiveMQ
-* Micronaut Framework
-* ...
-
 **Note :** _These modules tested with Java 21._
 
 ### Generate `jpkg` archive
