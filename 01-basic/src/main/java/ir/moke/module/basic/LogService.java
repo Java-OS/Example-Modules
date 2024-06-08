@@ -6,8 +6,8 @@ import org.slf4j.LoggerFactory;
 public class LogService {
     private static final Logger logger = LoggerFactory.getLogger(LogService.class);
 
-    public static void generateLog() {
-        while (true) {
+    public static void generateLog(boolean enable) {
+        while (enable) {
             sleep();
             sendInfoLog();
             sendWarnLog();
@@ -17,23 +17,23 @@ public class LogService {
         }
     }
 
-    public static void sendInfoLog() {
+    private static void sendInfoLog() {
         logger.info("This is info log");
     }
 
-    public static void sendDebugLog() {
+    private static void sendDebugLog() {
         logger.debug("This is debug log");
     }
 
-    public static void sendWarnLog() {
+    private static void sendWarnLog() {
         logger.warn("This is warn log");
     }
 
-    public static void sendErrorLog() {
+    private static void sendErrorLog() {
         logger.error("This is error log");
     }
 
-    public static void sendTraceLog() {
+    private static void sendTraceLog() {
         logger.trace("This is trace log");
     }
 
