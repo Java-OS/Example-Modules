@@ -23,11 +23,7 @@ ls ./target/jos-module/01-basic-0.1.jpkg
 You **must** exclude any jar file contain this modules from your projects :
 
 * jos.api
-* ch.qos.logback.classic
-* ch.qos.logback.core
 * org.slf4j
-* logback.json.core
-* logback.json.classic
 
 ### Manage Modules:
 
