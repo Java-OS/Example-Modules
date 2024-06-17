@@ -71,6 +71,13 @@
                 <groupId>ir.moke.jpkg</groupId>
                 <artifactId>maven-jpkg</artifactId>
                 <version>1.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>archive</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
                     <name>01-basic</name>
                     <version>0.1</version>

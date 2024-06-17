@@ -1,7 +1,7 @@
 package ir.moke.module.api;
 
 import ir.moke.jos.api.IModule;
-import ir.moke.module.common.ApplicationVerticle;
+import ir.moke.module.vertx.common.ApplicationVerticle;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

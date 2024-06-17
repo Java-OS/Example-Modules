@@ -107,32 +107,17 @@
 
     <build>
         <plugins>
-            <!-- copy compiled jar file to target/lib , only needed for test jpms -->
+            <!-- Jar plugin , used for add Automatic-Module-Name attribute -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.2</version>
                 <configuration>
-                    <outputDirectory>${project.build.directory}/lib/</outputDirectory>
+                    <archive>
+                        <manifestEntries>
+                            <Automatic-Module-Name>micronaut.hibernate.module</Automatic-Module-Name>
+                        </manifestEntries>
+                    </archive>
                 </configuration>
-            </plugin>
-
-            <!-- Copy dependencies , only needed for test jpms -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>copy-dependencies</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy-dependencies</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
 
             <!-- Maven Enforcer -->
@@ -200,6 +185,13 @@
                 <groupId>ir.moke.jpkg</groupId>
                 <artifactId>maven-jpkg</artifactId>
                 <version>1.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>archive</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
                     <name>14-micronaut-hibernate</name>
                     <version>0.1</version>

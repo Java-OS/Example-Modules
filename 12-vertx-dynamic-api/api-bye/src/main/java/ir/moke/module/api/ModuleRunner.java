@@ -1,4 +1,4 @@
-package ir.moke.module.vertx.api;
+package ir.moke.module.api;
 
 import ir.moke.jos.api.IModule;
 import ir.moke.module.vertx.common.ApplicationVerticle;
