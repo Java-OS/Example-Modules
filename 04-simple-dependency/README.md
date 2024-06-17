@@ -1,7 +1,7 @@
 ## Module with dependency
 
 This module dependent to 00-module .   
-You should not in `pom.xml` dependency scope must be `provided`.
+Dependency scope in `pom.xml` must be `provided`.
 
 before install you must compile and install 00-common .
 
