@@ -6,10 +6,10 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Random;
 
-public class byeRoute {
+public class ByeRoute {
     public static final String ROUTE_NAME = "bye";
     public static final String ROUTE_PATH = "/bye";
-    private static final Logger logger = LoggerFactory.getLogger(byeRoute.class);
+    private static final Logger logger = LoggerFactory.getLogger(ByeRoute.class);
     private static final Random random = new Random();
 
     public static void handle(RoutingContext context) {

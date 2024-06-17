@@ -11,12 +11,12 @@ public class ModuleRunner implements IModule {
     @Override
     public void start() {
         logger.info("Start module");
-        ApplicationVerticle.instance.registerRoute(byeRoute::handle, byeRoute.ROUTE_NAME, byeRoute.ROUTE_PATH);
+        ApplicationVerticle.instance.registerRoute(ByeRoute::handle, ByeRoute.ROUTE_NAME, ByeRoute.ROUTE_PATH);
     }
 
     @Override
     public void stop() {
         logger.info("Stop module");
-        ApplicationVerticle.instance.removeRouteByName(byeRoute.ROUTE_NAME);
+        ApplicationVerticle.instance.removeRouteByName(ByeRoute.ROUTE_NAME);
     }
 }
