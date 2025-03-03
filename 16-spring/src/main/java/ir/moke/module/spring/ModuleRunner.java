@@ -14,7 +14,7 @@ public class ModuleRunner implements IModule {
     public void start() {
         /*
          * Only for bypass FUCKING org.apache.catalina.loader.WebappClassLoaderBase#clearReferencesJdbc
-         * somebody tell to tomcat team to fix this fucking NPE bug .
+         * somebody tell to tomcat team fix this fucking NPE bug .
          * */
         sysProps.setProperty("org.graalvm.nativeimage.imagecode", "runtime");
         logger.info("Start module");

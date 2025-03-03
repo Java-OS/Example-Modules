@@ -41,10 +41,9 @@ public class HttpContainer {
         connector = tomcat.getConnector();
         Context tomcatContext = tomcat.addContext(contextPath, baseDir);
 
-//        // Add Spring's DispatcherServlet
+        // Add Spring's DispatcherServlet
         DispatcherServlet dispatcherServlet = new DispatcherServlet(context);
         Tomcat.addServlet(tomcatContext, "dispatcher", dispatcherServlet);
-//        tomcatContext.addServletMappingDecoded("/*", "dispatcher");
         tomcatContext.addServletMappingDecoded("/*", "dispatcher");
     }
 

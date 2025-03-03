@@ -2,17 +2,21 @@ package ir.moke.module.basic;
 
 import ir.moke.jos.api.IModule;
 
+import java.util.Timer;
+
 public class ModuleRunner implements IModule {
-    private static boolean enable = false;
+
+    private Timer timer;
 
     @Override
     public void start() {
-        enable = true;
-        LogService.generateLog(enable);
+        LogService logService = new LogService();
+        this.timer = new Timer("Log Service");
+        timer.scheduleAtFixedRate(logService, 1000, 1000);
     }
 
     @Override
     public void stop() {
-        enable = false;
+        timer.cancel();
     }
 }

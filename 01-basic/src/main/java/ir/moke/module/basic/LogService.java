@@ -3,19 +3,10 @@ package ir.moke.module.basic;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class LogService {
-    private static final Logger logger = LoggerFactory.getLogger(LogService.class);
+import java.util.TimerTask;
 
-    public static void generateLog(boolean enable) {
-        while (enable) {
-            sleep();
-            sendInfoLog();
-            sendWarnLog();
-            sendDebugLog();
-            sendErrorLog();
-            sendTraceLog();
-        }
-    }
+public class LogService extends TimerTask {
+    private static final Logger logger = LoggerFactory.getLogger(LogService.class);
 
     private static void sendInfoLog() {
         logger.info("This is info log");
@@ -37,11 +28,12 @@ public class LogService {
         logger.trace("This is trace log");
     }
 
-    public static void sleep() {
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+    @Override
+    public void run() {
+        sendInfoLog();
+        sendWarnLog();
+        sendDebugLog();
+        sendErrorLog();
+        sendTraceLog();
     }
 }
